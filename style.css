@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #53884e;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #67b161;
+}
+
+
+
+
+.container{
+    max-width: 400px;
+    margin:0 auto;
+    padding:50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top:100px;
+    border-radius: 30px;
+
+}
+.form-group{
+    margin-bottom:30px;
+}
+
+input[type=text] {
+    border-radius:5px;
+    width:300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+  }
+  input[type="text"]:focus {
+    outline: none; 
+    border-color: #53884e; 
+    box-shadow: 0 0 5px #53884e; 
+  }
+
+  input[type=emamil] {
+    border-radius:5px;
+    width:300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+  }
+  input[type="emamil"]:focus {
+    outline: none; 
+    border-color: #53884e; 
+    box-shadow: 0 0 5px #53884e; 
+  }
+
+  input[type=password] {
+    border-radius:5px;
+    width:300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+  }
+  input[type="password"]:focus {
+    outline: none; 
+    border-color: #53884e; 
+    box-shadow: 0 0 5px #53884e; 
+  }
+
+.btn-primary{
+    border-radius:30px;
+    color:white;
+    border-color: #53884e;
+    background-color: #53884e;
+    padding: 5px;
+}
+.btn-primary{
+    border-radius:30px;
+    color:white;
+    border-color: #53884e;
+    background-color: #53884e;
+    padding: 10px;
+    cursor:pointer;
+    display: inline-block;
+    border: none;
+    outline: none;
+}
