@@ -14,13 +14,12 @@ session_start();
 <nav class="navbar">
     <div class="logo">
         <a href="index.php">
-           <img src="" alt="FlatlineHZS" class="logo">
+           <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 50px;margin-top:2px;margin-left:5px;">
         </a>
     </div>
-       
         <div class="navbar-links">
           <ul>
-            <li style="background-color: #67b161;"><a href="index.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="mesta.php">Places</a></li>
             <li><a href="restorani.php">Restaurants</a></li>
 
@@ -32,7 +31,45 @@ session_start();
             <?php endif; ?>
           </ul>
         </div>
-
+        <div class="menu-btn" style="margin-right: 10px;"></div>
       </nav>
-</body>
+    
+      <div style="text-align: center;font-size:xx-large;">
+        <h1>Welcome!</h1>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            var navLinks = document.querySelector('.navbar-links');
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    </body>
 </html>
