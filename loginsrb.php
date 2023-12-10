@@ -9,30 +9,29 @@
 </head>
 <body style="background-color: #f5f5dc;">
 <nav class="navbar">
-    <div class="logo">
-        <a href="index.php">
+<div class="logo">
+        <a href="indexsrb.php">
            <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 54px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
         <div style="float:inline-end;margin-top:20px;">
-    <a href="loginsrb.php" style="margin-right:3px;">
+            <a href="loginsrb.php" style="margin-right:3px;">
            <img src="img/serbia.png" alt="FlatlineHZS" class="logo" style="height: 20px;">
         </a>
         <a href="login.php" style="margin-right:20px;">
            <img src="img/united-kingdom.png" alt="FlatlineHZS" class="logo" style="height: 20px;">
         </a></div>
     </div>
-   
         <div class="navbar-links">
-        <ul>    
-            <li><a href="index.php" style="font-size:17px;">Home</a></li>
-            <li><a href="mesta.php">Places</a></li>
-            <li><a href="restorani.php">Restaurants</a></li>
+          <ul>
+            <li><a href="indexsrb.php" style="font-size:17px;">Početna</a></li>
+            <li><a href="mestasrb.php">Mesta</a></li>
+            <li><a href="restoranisrb.php">Restorani</a></li>
 
             <?php if (isset($_SESSION['user'])): ?>
-                <li><a href="logout.php">Logout</a></li>
-                <li style="margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
+                <li><a href="logoutsrb.php">Odjavi se</a></li>
+                <li style="margin-right:10px;">Dobro došao, <?php echo $_SESSION['user']; ?>!</li>
             <?php else: ?>
-                <li><a href="signup.php">Sign up</a></li>
+                <li><a href="signupsrb.php">Registruj se</a></li>
             <?php endif; ?>
           </ul>
         </div>
@@ -40,7 +39,7 @@
       </nav>
 
       <div class="container">
-      <h1>Log in</h1>
+      <h1>Prijavi se</h1>
       <?php
     if (isset($_POST["login"])) {
         $email = $_POST["email"];
@@ -53,13 +52,13 @@
             if (password_verify($password, $user["password"])) {
                 session_start();
                 $_SESSION["user"] = $user["full_name"]; 
-                header("Location: index.php");
+                header("Lokacija: index.php");
                 die();
             } else {
-                echo "<div class='alert alert-danger'>Password does not match</div>";
+                echo "<div class='alert alert-danger'>Šifra se ne poklapa/div>";
             }
         } else {
-            echo "<div class='alert alert-danger'>Email does not match</div>";
+            echo "<div class='alert alert-danger'>Email se ne poklapa</div>";
         }
     }
     ?>
@@ -74,7 +73,7 @@
             <input type="submit" value="Login" name="login" class="btn btn-primary">
         </div>
       </form>
-     <div><p>Not registered yet <a href="signup.php" style="color:#53884e;text-decoration:underline;">Register Here.</a></p></div>
+     <div><p>Niste registrovani <a href="signup.php" style="color:#53884e;text-decoration:underline;">Registruj se ovde.</a></p></div>
     </div>
 
     <script>

@@ -9,8 +9,8 @@
 </head>
 <body style="background-color: #f5f5dc;">
 <nav class="navbar">
-    <div class="logo">
-        <a href="index.php">
+<div class="logo">
+        <a href="indexsrb.php">
            <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 54px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
         <div style="float:inline-end;margin-top:20px;">
@@ -21,18 +21,18 @@
            <img src="img/united-kingdom.png" alt="FlatlineHZS" class="logo" style="height: 20px;">
         </a></div>
     </div>
-   
         <div class="navbar-links">
-        <ul>    
-            <li><a href="index.php" style="font-size:17px;">Home</a></li>
-            <li><a href="mesta.php">Places</a></li>
-            <li><a href="restorani.php">Restaurants</a></li>
+          <ul>
+            
+            <li><a href="indexsrb.php" style="font-size:17px;">Početna</a></li>
+            <li><a href="mestasrb.php">Mesta</a></li>
+            <li><a href="restoranisrb.php">Restorani</a></li>
 
             <?php if (isset($_SESSION['user'])): ?>
-                <li><a href="logout.php">Logout</a></li>
-                <li style="margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
+                <li><a href="logoutsrb.php">Odjavi se</a></li>
+                <li style="margin-right:10px;">Dobro došao, <?php echo $_SESSION['user']; ?>!</li>
             <?php else: ?>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="loginsrb.php">Prijavi se</a></li>
             <?php endif; ?>
           </ul>
         </div>
@@ -42,7 +42,7 @@
 
 
 <div class="container" style="margin-top:100px;">
-<h1>Sign up</h1>
+<h1>Registruj se</h1>
 <?php
         if (isset($_POST["submit"])) {
            $fullName = $_POST["fullname"];
@@ -55,23 +55,23 @@
            $errors = array();
            
            if (empty($fullName) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
-            array_push($errors,"All fields are required");
+            array_push($errors,"Sva polja su obavezna");
            }
            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            array_push($errors, "Email is not valid");
+            array_push($errors, "Email nije validan");
            }
            if (strlen($password)<8) {
-            array_push($errors,"Password must be at least 8 charactes long");
+            array_push($errors,"Šifra mora da bude minimalno 8 karakterea");
            }
            if ($password!==$passwordRepeat) {
-            array_push($errors,"Password does not match");
+            array_push($errors, "Šifra se ne poklapa");
            }
            require_once "database.php";
            $sql = "SELECT * FROM users WHERE email = '$email'";
            $result = mysqli_query($conn, $sql);
            $rowCount = mysqli_num_rows($result);
            if ($rowCount>0) {
-            array_push($errors,"Email already exists!");
+            array_push($errors,"Email već postoji!");
            }
            if (count($errors)>0) {
             foreach ($errors as  $error) {
@@ -85,9 +85,9 @@
             if ($prepareStmt) {
                 mysqli_stmt_bind_param($stmt,"sss",$fullName, $email, $passwordHash);
                 mysqli_stmt_execute($stmt);
-                echo "<div class='alert alert-success'>You are registered successfully.</div>";
+                echo "<div class='alert alert-success'>Uspešno si se registrovao.</div>";
             }else{
-                die("Something went wrong");
+                die("Nešto nije u redu");
             }
            }
           

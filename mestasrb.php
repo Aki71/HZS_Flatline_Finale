@@ -16,7 +16,7 @@ session_start();
 ?>
     <nav class="navbar">
     <div class="logo">
-        <a href="index.php">
+        <a href="indexsrb.php">
            <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 54px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
         <div style="float:inline-end;margin-top:20px;">
@@ -27,18 +27,17 @@ session_start();
            <img src="img/united-kingdom.png" alt="FlatlineHZS" class="logo" style="height: 20px;">
         </a></div>
     </div>
-   
         <div class="navbar-links">
-        <ul>    
-            <li><a href="index.php" style="font-size:17px;">Home</a></li>
-            <li><a href="mesta.php" style="color:black;font-weight:bold;">Places</a></li>
-            <li><a href="restorani.php">Restaurants</a></li>
+          <ul>
+            <li><a href="indexsrb.php" style="font-size:17px;">Početna</a></li>
+            <li><a href="mestasrb.php" style="color:black;font-weight:bold;">Mesta</a></li>
+            <li><a href="restoransrb.php">Restorani</a></li>
 
             <?php if (isset($_SESSION['user'])): ?>
-                <li><a href="logout.php">Logout</a></li>
-                <li style="margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
+                <li><a href="logoutsrb.php">Odjavi se</a></li>
+                <li style="margin-right:10px;">Dobro došao, <?php echo $_SESSION['user']; ?>!</li>
             <?php else: ?>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="loginsrb.php">Prijavi se</a></li>
             <?php endif; ?>
           </ul>
         </div>
@@ -48,13 +47,13 @@ session_start();
 
                 <div class="mesta-resp"> 
                     <div class="post-container">
-                        <h2 class="post-title">Faculty of Organizational Sciences</h2>
+                        <h2 class="post-title">Fakultet organizacionih nauka</h2>
                         <p class="post-content">
-                            The Association of Informatics Students of the Faculty of Organizational Sciences, FONIS, is a student organization that gathers future IT experts in order to participate in professional lectures, courses, competitions and seminars, work on projects and achieve professional practices in IT fields. FONIS represents the only faculty organization closely specialized in the field of information technologies. As such, it strives to promote IT, the Information Systems and Technologies department at the Faculty of Organizational Sciences, as well as its members, who are engaged in various projects in the field of informatics and management in IT.
+                        Udruženje studenata informatike Fakulteta organizacionih nauka FONIS je studentska organizacija koja okuplja buduće IT stručnjake kako bi učestvovali na stručnim predavanjima, kursevima, takmičenjima i seminarima, radili na projektima i sticali stručne prakse u IT oblastima. FONIS predstavlja jedinu fakultetsku organizaciju usko specijalizovanu za oblast informacionih tehnologija. Kao takva, nastoji da promoviše IT, smer Informacioni sistemi i tehnologije na Fakultetu organizacionih nauka, kao i svoje članove koji su angažovani na različitim projektima iz oblasti informatike i menadžmenta u IT.
                         </p>
                         <img src="img/fon.jpg" alt="" class="post-image" style="height: 200px;">
                         <audio controls class="citanje">
-                            <source src="audio/fonis-voice.mp3" type="audio/mpeg" >
+                            <source src="audio/fonice-zvuk.mp3" type="audio/mpeg" >
                         </audio>
                     </div>
                 <div class="mapica">

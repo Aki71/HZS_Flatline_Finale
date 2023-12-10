@@ -13,8 +13,8 @@
 session_start();
 ?>
 <nav class="navbar">
-    <div class="logo">
-        <a href="index.php">
+<div class="logo">
+        <a href="indexsrb.php">
            <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 54px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
         <div style="float:inline-end;margin-top:20px;">
@@ -25,18 +25,17 @@ session_start();
            <img src="img/united-kingdom.png" alt="FlatlineHZS" class="logo" style="height: 20px;">
         </a></div>
     </div>
-   
         <div class="navbar-links">
-        <ul>    
-            <li><a href="index.php" style="color:black;font-weight:bold;font-size:17px;">Home</a></li>
-            <li><a href="mesta.php">Places</a></li>
-            <li><a href="restorani.php">Restaurants</a></li>
+          <ul>
+            <li><a href="indexsrb.php" style="color:black;font-weight:bold;font-size:17px;">Početna</a></li>
+            <li><a href="mestasrb.php">Mesta</a></li>
+            <li><a href="restoransrb.php">Restorani</a></li>
 
             <?php if (isset($_SESSION['user'])): ?>
-                <li><a href="logout.php">Logout</a></li>
-                <li style="margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
+                <li><a href="logoutsrb.php">Odjavi se</a></li>
+                <li style="margin-right:10px;">Dobro došao, <?php echo $_SESSION['user']; ?>!</li>
             <?php else: ?>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="loginsrb.php">Prijavi se</a></li>
             <?php endif; ?>
           </ul>
         </div>
@@ -44,8 +43,8 @@ session_start();
       </nav>
     
       <div style="text-align: center;">
-        <h1 style="font-family: 'Montserrat', sans-serif;">Finished a meeting, what now?</h1>
-        <p style="font-family: 'Open Sans', sans-serif;">After a meeting, you're not senteced to a hotel room. TravelMaster will take it from here.</p>
+        <h1 style="font-family: 'Montserrat', sans-serif;">Završio si predavanje, šta sad?</h1>
+        <p style="font-family: 'Open Sans', sans-serif;">Posle sastanka, ne morate da budete zaglavljeni u hotelskoj sobi. TravelMaster će to preuzeti odavde.</p>
       </div>
 
       <div class="slideshow-container">

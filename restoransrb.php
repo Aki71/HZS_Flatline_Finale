@@ -29,7 +29,7 @@ session_start();
 ?>
     <nav class="navbar">
     <div class="logo">
-        <a href="index.php">
+        <a href="indexsrb.php">
            <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 54px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
         <div style="float:inline-end;margin-top:20px;">
@@ -40,22 +40,21 @@ session_start();
            <img src="img/united-kingdom.png" alt="FlatlineHZS" class="logo" style="height: 20px;">
         </a></div>
     </div>
-   
         <div class="navbar-links">
-        <ul>    
-            <li><a href="index.php" style="font-size:17px;">Home</a></li>
-            <li><a href="mesta.php">Places</a></li>
-            <li><a href="restorani.php" style="color:black;font-weight:bold;">Restaurants</a></li>
+          <ul>
+            <li><a href="indexsrb.php" style="font-size:17px;">Početna</a></li>
+            <li><a href="mestasrb.php">Mesta</a></li>
+            <li><a href="restoranisrb.php" style="color:black;font-weight:bold;">Restorani</a></li>
 
             <?php if (isset($_SESSION['user'])): ?>
-                <li><a href="logout.php">Logout</a></li>
-                <li style="margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
+                <li><a href="logoutsrb.php">Odjavi se</a></li>
+                <li style="margin-right:10px;">Dobro došao, <?php echo $_SESSION['user']; ?>!</li>
             <?php else: ?>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="loginsrb.php">Prijavi se</a></li>
             <?php endif; ?>
           </ul>
         </div>
-        <div class="menu-btn" style="margin-right: 10px;"></div>
+        <div class="menu-btn" style="margin-right: 10px;" id="yourHamburgerMenu"></div>
       </nav>
       <div>
         <iframe style="border: 0;" src="//maps.google.com/maps?q=restaurants+near+me&amp;output=embed" width="100%" height="570"  frameborder="0" allowfullscreen="allowfullscreen">1
