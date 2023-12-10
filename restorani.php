@@ -57,17 +57,18 @@ session_start();
         </div>
         <div class="menu-btn" style="margin-right: 10px;"></div>
       </nav>
-      <div>
-        <iframe style="border: 0;" src="//maps.google.com/maps?q=restaurants+near+me&amp;output=embed" width="100%" height="570"  frameborder="0" allowfullscreen="allowfullscreen">1
-      </div>
-      
-
-    <script>
+      <script>
         document.querySelector('.menu-btn').addEventListener('click', function() {
             var navLinks = document.querySelector('.navbar-links');
             navLinks.classList.toggle('show');
         });
     </script>
+      <div>
+        <iframe style="border: 0;" src="//maps.google.com/maps?q=restaurants+near+me&amp;output=embed" width="100%" height="570"  frameborder="0" allowfullscreen="allowfullscreen">1
+      </div>
+      
+
+    
       
 </body>
 </html>

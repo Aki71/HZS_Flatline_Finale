@@ -46,7 +46,7 @@ session_start();
       </nav>
 
 
-                <div class="mesta-resp"> 
+                <div class="mesta-resp" style="margin-left: 20px;"> 
                     <div class="post-container">
                         <h2 class="post-title">Faculty of Organizational Sciences</h2>
                         <p class="post-content">
