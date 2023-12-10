@@ -6,6 +6,7 @@
     <title>TravelMaster</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font.css">
 </head>
 
 <body style="background-color: #f5f5dc;">
@@ -28,7 +29,7 @@ session_start();
    
         <div class="navbar-links">
         <ul>    
-            <li><a href="index.php" style="color:black;font-weight:bold;font-size:17px;">Home</a></li>
+            <li><a href="index.php" style="color:black;">Home</a></li>
             <li><a href="mesta.php">Places</a></li>
             <li><a href="restorani.php">Restaurants</a></li>
 
@@ -42,6 +43,7 @@ session_start();
         </div>
         <div class="menu-btn" style="margin-right: 10px;"></div>
       </nav>
+
       <div style="text-align: center;">
         <h1 style="font-family: 'Montserrat', sans-serif;">Finished a meeting, what now?</h1>
         <p style="font-family: 'Open Sans', sans-serif;">After a meeting, you're not senteced to a hotel room. TravelMaster will take it from here.</p>

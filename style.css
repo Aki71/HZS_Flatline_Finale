@@ -86,6 +86,7 @@ a:focus, a:active {
 
     .navbar-links.show {
         display: flex;
+        font-size: 10px;
     }
 
     .menu-btn {
@@ -427,3 +428,5 @@ input[type=text] {
         margin-top: 0;
     }
 }
+
+

@@ -24,7 +24,7 @@
         <div class="navbar-links">
           <ul>
             
-            <li><a href="indexsrb.php" style="font-size:17px;">Početna</a></li>
+            <li><a href="indexsrb.php" >Početna</a></li>
             <li><a href="mestasrb.php">Mesta</a></li>
             <li><a href="restoranisrb.php">Restorani</a></li>
 

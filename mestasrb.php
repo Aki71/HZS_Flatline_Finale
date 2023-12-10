@@ -29,7 +29,7 @@ session_start();
     </div>
         <div class="navbar-links">
           <ul>
-            <li><a href="indexsrb.php" style="font-size:17px;">Početna</a></li>
+            <li><a href="indexsrb.php" >Početna</a></li>
             <li><a href="mestasrb.php" style="color:black;font-weight:bold;">Mesta</a></li>
             <li><a href="restoransrb.php">Restorani</a></li>
 

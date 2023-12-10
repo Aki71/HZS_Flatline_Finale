@@ -24,7 +24,7 @@
    
         <div class="navbar-links">
         <ul>    
-            <li><a href="index.php" style="font-size:17px;">Home</a></li>
+            <li><a href="index.php" >Home</a></li>
             <li><a href="mesta.php">Places</a></li>
             <li><a href="restorani.php">Restaurants</a></li>
 
