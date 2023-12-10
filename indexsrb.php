@@ -43,8 +43,8 @@ session_start();
       </nav>
     
       <div style="text-align: center;">
-        <h1 style="font-family: 'Montserrat', sans-serif;">Završio si predavanje, šta sad?</h1>
-        <p style="font-family: 'Open Sans', sans-serif;">Posle sastanka, ne morate da budete zaglavljeni u hotelskoj sobi. TravelMaster će to preuzeti odavde.</p>
+        <h1 style="font-family: 'Montserrat', sans-serif;">Završio si sastanak, <br>šta sad?</h1>
+        <p style="font-family: 'Open Sans', sans-serif;">Posle sastanka, ne morate da budete zaglavljeni u hotelskoj sobi. <br>TravelMaster će to preuzeti odavde.</p>
       </div>
 
       <div class="slideshow-container">

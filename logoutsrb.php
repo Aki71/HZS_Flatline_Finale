@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header("Lokacija: indexsrb.php");
+header("Location: indexsrb.php");
 ?>

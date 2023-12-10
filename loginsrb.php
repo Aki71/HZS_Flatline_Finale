@@ -52,13 +52,13 @@
             if (password_verify($password, $user["password"])) {
                 session_start();
                 $_SESSION["user"] = $user["full_name"]; 
-                header("Lokacija: index.php");
+                header("location: indexsrb.php");
                 die();
             } else {
-                echo "<div class='alert alert-danger'>Šifra se ne poklapa/div>";
+                echo "<div class='alert alert-danger'>Password does not match</div>";
             }
         } else {
-            echo "<div class='alert alert-danger'>Email se ne poklapa</div>";
+            echo "<div class='alert alert-danger'>Email does not match</div>";
         }
     }
     ?>
@@ -70,10 +70,10 @@
             <input type="password" placeholder="Enter Password:" name="password" class="form-control">
         </div>
         <div class="form-btn">
-            <input type="submit" value="Login" name="login" class="btn btn-primary">
+            <input type="submit" value="Prijavi se" name="login" class="btn btn-primary">
         </div>
       </form>
-     <div><p>Niste registrovani <a href="signup.php" style="color:#53884e;text-decoration:underline;">Registruj se ovde.</a></p></div>
+     <div><p>Niste registrovani <a href="signupsrb.php" style="color:#53884e;text-decoration:underline;">Registruj se ovde.</a></p></div>
     </div>
 
     <script>
