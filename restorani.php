@@ -15,14 +15,14 @@ session_start();
     <nav class="navbar">
     <div class="logo">
         <a href="index.php">
-        <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 50px;margin-top:2px;margin-left:5px;border:0;outline:0;">
+           <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 54px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
     </div>
         <div class="navbar-links">
           <ul>
-            <li><a href="index.php" style="font-size:17px;">Home</a></li>
-            <li><a href="mesta.php" >Places</a></li>
-            <li><a href="restorani.php" style="color:black;font-weight:bold;">Restaurants</a></li>
+            <li><a href="index.php" style="color:black;font-weight:bold;font-size:17px;">Home</a></li>
+            <li><a href="mesta.php">Places</a></li>
+            <li><a href="restorani.php">Restaurants</a></li>
 
             <?php if (isset($_SESSION['user'])): ?>
                 <li><a href="logout.php">Logout</a></li>
@@ -32,13 +32,19 @@ session_start();
             <?php endif; ?>
           </ul>
         </div>
+        <div class="menu-btn" style="margin-right: 10px;"></div>
       </nav>
       <div>
         <iframe style="border: 0;" src="//maps.google.com/maps?q=restaurants+near+me&amp;output=embed" width="100%" height="570"  frameborder="0" allowfullscreen="allowfullscreen">1
       </div>
       
 
-
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            var navLinks = document.querySelector('.navbar-links');
+            navLinks.classList.toggle('show');
+        });
+    </script>
       
 </body>
 </html>

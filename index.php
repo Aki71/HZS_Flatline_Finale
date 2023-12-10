@@ -35,7 +35,7 @@ session_start();
         <div class="menu-btn" style="margin-right: 10px;"></div>
       </nav>
     
-      <div style="text-align: center;" class="header">
+      <div style="text-align: center;">
         <h1 style="font-family: 'Montserrat', sans-serif;">Finished a meeting, what now?</h1>
         <p style="font-family: 'Open Sans', sans-serif;">After a meeting, you're not senteced to a hotel room. TravelMaster will take it from here.</p>
       </div>

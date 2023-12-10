@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body style="background-color: #f5f5dc;">
-    <nav class="navbar">
+<nav class="navbar">
     <div class="logo">
         <a href="index.php">
-        <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 50px;margin-top:2px;margin-left:5px;border:0;outline:0;">
+           <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 54px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
     </div>
         <div class="navbar-links">
@@ -19,9 +19,16 @@
             <li><a href="index.php" style="font-size:17px;">Home</a></li>
             <li><a href="mesta.php">Places</a></li>
             <li><a href="restorani.php">Restaurants</a></li>
-            <li><a href="login.php">Log in</a></li>
+
+            <?php if (isset($_SESSION['user'])): ?>
+                <li><a href="logout.php">Logout</a></li>
+                <li style="margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
+            <?php else: ?>
+                <li><a href="login.php">Login</a></li>
+            <?php endif; ?>
           </ul>
         </div>
+        <div class="menu-btn" style="margin-right: 10px;"></div>
       </nav>
 
 
@@ -98,5 +105,11 @@
             </div>
         </form>
 </div>
+<script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            var navLinks = document.querySelector('.navbar-links');
+            navLinks.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
