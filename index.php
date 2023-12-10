@@ -42,7 +42,6 @@ session_start();
         </div>
         <div class="menu-btn" style="margin-right: 10px;"></div>
       </nav>
-    
       <div style="text-align: center;">
         <h1 style="font-family: 'Montserrat', sans-serif;">Finished a meeting, what now?</h1>
         <p style="font-family: 'Open Sans', sans-serif;">After a meeting, you're not senteced to a hotel room. TravelMaster will take it from here.</p>
@@ -52,19 +51,19 @@ session_start();
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="img/Barcelona.jpg" style="width:100%;height:450px;">
+  <img src="img/slika.jpg" style="width:100%;height:450px;">
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="img/Barcelona.jpg" style="width:100%;height:450px;">
+  <img src="img/grad_4.jpeg" style="width:100%;height:450px;">
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="img/Barcelona.jpg" style="width:100%;height:450px;">
+  <img src="img/grad_3.jpeg" style="width:100%;height:450px;">
  
 </div>
 

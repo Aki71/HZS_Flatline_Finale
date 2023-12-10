@@ -43,27 +43,27 @@ session_start();
       </nav>
     
       <div style="text-align: center;">
-        <h1 style="font-family: 'Montserrat', sans-serif;">Završio si sastanak, <br>šta sad?</h1>
-        <p style="font-family: 'Open Sans', sans-serif;">Posle sastanka, ne morate da budete zaglavljeni u hotelskoj sobi. <br>TravelMaster će to preuzeti odavde.</p>
+        <h1 style="font-family: 'Montserrat', sans-serif;">Završio si sastanak,šta sad?</h1>
+        <p style="font-family: 'Open Sans', sans-serif;">Posle sastanka, ne morate da budete zaglavljeni u hotelskoj sobi. TravelMaster će to preuzeti odavde.</p>
       </div>
 
       <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="img/Barcelona.jpg" style="width:100%;height:450px;">
+  <img src="img/slika.jpg" style="width:100%;height:450px;">
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="img/Barcelona.jpg" style="width:100%;height:450px;">
+  <img src="img/grad_4.jpeg" style="width:100%;height:450px;">
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="img/Barcelona.jpg" style="width:100%;height:450px;">
+  <img src="img/grad_3.jpeg" style="width:100%;height:450px;">
  
 </div>
 
