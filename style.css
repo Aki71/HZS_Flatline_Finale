@@ -65,6 +65,14 @@ a:focus, a:active {
 }
 
 @media (max-width: 600px) {
+    .mesta-resp{
+        display: flex;
+        flex-direction: column;
+    }
+    .mapica{
+        margin-right: 0;
+        margin-left: 0;
+    }
     .navbar-links {
         display: none;
         flex-direction: column;
@@ -315,8 +323,12 @@ input[type=text] {
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
+    
   }
-
+  
+  .mesta-resp{
+    display: flex;
+}
 
   .post-container {
     width: 550px;
@@ -354,7 +366,12 @@ input[type=text] {
 }
 
 @media screen and (max-width: 600px) {
-    /* Adjust styles for smaller screens */
+    
+    .mesta-resp{
+        display: flex;
+    }
+
+
     .post-title {
         font-size: 20px;
     }
@@ -399,3 +416,14 @@ input[type=text] {
 }
 
 
+@media screen and (min-width: 601px) {
+    .mesta-resp {
+        flex-direction: row;
+    }
+
+    .mapica {
+        margin-right: 20px;
+        margin-left: 20px; /* Added left margin */
+        margin-top: 0;
+    }
+}

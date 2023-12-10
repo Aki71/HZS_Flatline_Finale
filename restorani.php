@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelBusiness</title>
+    <title>TravelMaster</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9R5_WzRnEoZPhY9tfqUndbLuGFS3PeYM&libraries=places&callback=initMap" async defer></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: 0;
+            display: block;
+        }
+    </style>
 </head>
+
 <body style="background-color: #f5f5dc;" onload="getLocation()">
 <?php
 session_start();
@@ -32,7 +47,7 @@ session_start();
             <?php endif; ?>
           </ul>
         </div>
-        <div class="menu-btn" style="margin-right: 10px;"></div>
+        <div class="menu-btn" style="margin-right: 10px;" id="yourHamburgerMenu"></div>
       </nav>
       <div>
         <iframe style="border: 0;" src="//maps.google.com/maps?q=restaurants+near+me&amp;output=embed" width="100%" height="570"  frameborder="0" allowfullscreen="allowfullscreen">1
