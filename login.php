@@ -9,12 +9,16 @@
 </head>
 <body style="background-color: #f5f5dc;">
     <nav class="navbar">
-        <div class="brand-title">FlatlineHZS</div>
+    <div class="logo">
+        <a href="index.php">
+        <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 50px;margin-top:2px;margin-left:5px;border:0;outline:0;">
+        </a>
+    </div>
         <div class="navbar-links">
           <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="#">Places</a></li>
-            <li><a href="#">Restaurants</a></li>
+            <li><a href="index.php" style="font-size:17px;">Home</a></li>
+            <li><a href="mesta.php">Places</a></li>
+            <li><a href="restorani.php">Restaurants</a></li>
             <li><a href="signup.php">Sign up</a></li>
           </ul>
         </div>
@@ -54,7 +58,7 @@
             <input type="submit" value="Login" name="login" class="btn btn-primary">
         </div>
       </form>
-     <div><p>Not registered yet <a href="registration.php">Register Here</a></p></div>
+     <div><p>Not registered yet <a href="signup.php" style="color:#53884e;text-decoration:underline;">Register Here.</a></p></div>
     </div>
 </body>
 </html>

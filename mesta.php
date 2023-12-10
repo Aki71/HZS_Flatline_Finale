@@ -6,6 +6,7 @@
     <title>TravelBusiness</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9R5_WzRnEoZPhY9tfqUndbLuGFS3PeYM&libraries=places&callback=initMap" async defer></script>
     <style>
 #map {
   height: 500px;
@@ -19,18 +20,18 @@ session_start();
     <nav class="navbar">
     <div class="logo">
         <a href="index.php">
-           <img src="" alt="FlatlineHZS">
+        <img src="img/logo4.png" alt="FlatlineHZS" class="logo" style="height: 50px;margin-top:2px;margin-left:5px;border:0;outline:0;">
         </a>
     </div>
         <div class="navbar-links">
           <ul>
-            <li><a href="index.php">Home</a></li>
-            <li style="background-color: #67b161;"><a href="mesta.php">Places</a></li>
+            <li><a href="index.php" style="font-size:17px;">Home</a></li>
+            <li><a href="mesta.php" style="color:black;font-weight:bold;">Places</a></li>
             <li><a href="restorani.php">Restaurants</a></li>
 
             <?php if (isset($_SESSION['user'])): ?>
                 <li><a href="logout.php">Logout</a></li>
-                <li style="padding-top:15px;margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
+                <li style="margin-right:10px;">Welcome, <?php echo $_SESSION['user']; ?>!</li>
             <?php else: ?>
                 <li><a href="login.php">Login</a></li>
             <?php endif; ?>
@@ -38,75 +39,22 @@ session_start();
         </div>
       </nav>
 
-      <div id="map" class="mapa" > </div>
-
-
-      <script>
-        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-    key: "AIzaSyB9R5_WzRnEoZPhY9tfqUndbLuGFS3PeYM",
-    v: "weekly",
-  });
-</script>
-
-<script>
-function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
-            } else {
-                alert("Geolocation is not supported by this browser.");
-            }
-        }
-
-        function showPosition(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-                        
-             var userLocation = { latitude: latitude, longitude: longitude };
-
-             let map;
-
-            async function initMap() {
-
-            const position = { lat: latitude, lng: longitude };
-
-            //@ts-ignore
-            const { Map } = await google.maps.importLibrary("maps");
-            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-            map = new Map(document.getElementById("map"), {
-                zoom: 12,
-                center: position,
-                mapId: "DEMO_MAP_ID",
-            });
-
-
-            const marker = new AdvancedMarkerElement({
-                map: map,
-                position: position,
-                title: "Uluru",
-            });
-            }
-
-            initMap();
-                        
-        }
-
-        function showError(error) {
-            switch (error.code) {
-                case error.PERMISSION_DENIED:
-                    alert("User denied the request for geolocation.");
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    alert("Location information is unavailable.");
-                    break;
-                case error.TIMEOUT:
-                    alert("The request to get user location timed out.");
-                    break;
-                case error.UNKNOWN_ERROR:
-                    alert("An unknown error occurred.");
-                    break;
-            }
-        }
-    </script>
+      <div>
+        <div style="display: inline-flex;"> 
+            <div class="post-container">
+                <h2 class="post-title">Faculty of Organizational Sciences</h2>
+                <p class="post-content">
+                    The Association of Informatics Students of the Faculty of Organizational Sciences, FONIS, is a student organization that gathers future IT experts in order to participate in professional lectures, courses, competitions and seminars, work on projects and achieve professional practices in IT fields. FONIS represents the only faculty organization closely specialized in the field of information technologies. As such, it strives to promote IT, the Information Systems and Technologies department at the Faculty of Organizational Sciences, as well as its members, who are engaged in various projects in the field of informatics and management in IT.
+                </p>
+                <img src="img/fon.jpg" alt="" class="slika" style="height: 200px;">
+                <audio controls>
+                    <source src="audio/fonis-voice.mp3" type="audio/mpeg">
+            </audio>
+            </div>
+            <div>
+            <iframe src="//maps.google.com/maps?q=cafe+near+me&radius=100&amp;output=embed" width="550" height="550" style="border:0;margin-top:20px;margin-left:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+        </div>
+        
 </body>
 </html>

@@ -7,6 +7,8 @@ body {
     padding: 0;
 }
 
+
+
 .navbar {
     display: flex;
     position: relative;
@@ -34,12 +36,6 @@ a:focus, a:active {
     outline: none; 
 }
 
-
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
-
 .navbar-links {
     height: 100%;
     display: flex;
@@ -60,6 +56,7 @@ a:focus, a:active {
 
 .navbar-links li {
     margin-right: 20px;
+    font-family: Andale Mono, monospace;
 }
 
 .menu-btn {
@@ -107,7 +104,7 @@ a:focus, a:active {
     margin:0 auto;
     padding:50px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    margin-top:100px;
+    margin-top:150px;
     border-radius: 30px;
 
 }
@@ -174,8 +171,206 @@ input[type=text] {
 }
 
 .mapa{
-    height:300px;
-    width:500px;
-    margin-right:30px;
-    margin-top:50px;
+    height:250px;
+    width: 550px;
+    margin-top:20px;
+    margin-left: 30px;
 }
+
+.header{
+    margin-left: 30px;
+}
+
+.pic-ctn {
+    width: 100vw;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin-top: 15vh;
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    margin-left: 200px;
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+  .slideshow-container {
+    max-width: 95%;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+
+  .post-container {
+    width: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left:40px;
+}
+
+.post-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post-image {
+    width: 50%;
+    max-height: 300px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more-link {
+    display: inline-block;
+    background-color: #53884e; 
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+
+.slika{
+    width: 500px;
+}
+
+
